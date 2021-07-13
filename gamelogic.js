@@ -12,10 +12,10 @@ function displayWordSoFar(word, guesses) {
 //  console.log(string);
   return string;
 }
-//  * Hoe kan ik iedere letter afzonderlijk bekijken
-//  * Hoe kan ik automatisch over alle letters van het woord itereren
-//  * Zit deze letter in de guesses array, zo ja print letter zelf
-//  * Anders underscore
+  //  Hoe kan ik iedere letter afzonderlijk bekijken
+  //  Hoe kan ik automatisch over alle letters van het woord itereren
+  //  Zit deze letter in de guesses array, zo ja print letter zelf
+  //  Anders print underscore
 
 
 function isGameWon(word, guesses) {
@@ -33,7 +33,7 @@ function isGameWon(word, guesses) {
     }
 
   }
-//  console.log(uniqueLetters);
+  //  console.log(uniqueLetters);
 
     // Store guessed letters (the acrual letters, not the count)
   let guessedLetters = [];
@@ -44,11 +44,11 @@ function isGameWon(word, guesses) {
 
         // Record the correct letter in the correct letter array
       guessedLetters.push(guesses[i])
-//      console.log( `Letter ${ guesses[i] } is corrent, count is now ${ guessedLetters.length } of ${uniqueLetters.length  }` )
+        // console.log( `Letter ${ guesses[i] } is corrent, count is now ${ guessedLetters.length } of ${uniqueLetters.length  }` )
     }
   }
   if (guessedLetters.length == uniqueLetters.length) {
-//    console.log(`You win because ${ guessedLetters.length } is equal to than ${ uniqueLetters.length }`)
+  // console.log(`You win because ${ guessedLetters.length } is equal to than ${ uniqueLetters.length }`)
     return true;
    } else {
     return false;
@@ -64,9 +64,10 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  // WRITE ME
+
   // houdt het aantal verkeerd geraden letters bij
   let wrongLetters = 0;
+
   for (let i = 0; i <guesses.length; i++) {
     if (word.includes(guesses[i])) {
       // Doe niks, dit was een goede gok
